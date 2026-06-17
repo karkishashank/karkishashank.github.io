@@ -505,3 +505,93 @@ h3 {
         font-size: clamp(2.35rem, 13vw, 4rem);
     }
 }
+
+/* Additional CV-based sections */
+.education-grid,
+.honors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.honors-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.info-card,
+.skill-card,
+.publication-list article {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+    padding: 24px;
+}
+
+.info-card p,
+.skill-card p,
+.publication-list p {
+    color: var(--muted);
+    margin-top: 10px;
+}
+
+.card-date,
+.pub-status {
+    display: inline-flex;
+    color: var(--accent-dark);
+    background: var(--accent-soft);
+    border-radius: 999px;
+    padding: 6px 11px;
+    font-size: 0.78rem;
+    font-weight: 850;
+    margin-bottom: 14px;
+}
+
+.publication-list {
+    display: grid;
+    gap: 14px;
+}
+
+.publication-list article {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 18px;
+    align-items: start;
+}
+
+.publication-list .pub-status {
+    justify-self: start;
+    margin-bottom: 0;
+}
+
+.skills-section {
+    background: #efe8de;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+@media (max-width: 900px) {
+    .education-grid,
+    .honors-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .publication-list article {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .education-grid,
+    .honors-grid {
+        grid-template-columns: 1fr;
+    }
+}
