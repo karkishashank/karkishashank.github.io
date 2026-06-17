@@ -9,19 +9,20 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 <header class="site-header">
     <div class="container nav-container">
         <a class="brand" href="#home" aria-label="Shashank Karki home">
-            <span class="brand-name">Shashank Karki</span>
-            <span class="brand-subtitle">GeoAI · GIS · Urban Computing</span>
+            <span class="brand-mark">SK</span>
+            <span>
+                <span class="brand-name">Shashank Karki</span>
+                <span class="brand-subtitle">GeoAI · Urban Computing · GIS</span>
+            </span>
         </a>
         <nav class="site-nav" aria-label="Main navigation">
             <a href="#about">About</a>
             <a href="#research">Research</a>
-            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
             <a href="#publications">Publications</a>
-            <a href="#presentations">Presentations</a>
             <a href="#skills">Skills</a>
             <a href="assets/cv.pdf" target="_blank" rel="noopener">CV</a>
             <a href="#contact">Contact</a>
@@ -31,48 +32,78 @@
 
 <main id="home">
     <section class="hero section">
+        <div class="hero-bg-grid" aria-hidden="true"></div>
         <div class="container hero-grid">
             <div class="hero-copy">
                 <p class="eyebrow">Ph.D. Student · Virginia Tech</p>
-                <h1>Geospatial AI and spatial data science for healthier, more equitable cities.</h1>
+                <h1>Geospatial AI for cities, mobility, and environmental exposure.</h1>
                 <p class="hero-description">
-                    I am a Ph.D. student in Geospatial and Environmental Analysis at Virginia Tech. My research connects GeoAI, visual language models, transportation accessibility, lidar, remote sensing, and human-centered sensing to study urban environments and public service access.
+                    I use GeoAI, visual language models, spatial analysis, transit accessibility modeling, lidar, remote sensing, and human-centered sensing to study how people experience urban environments and access essential services.
                 </p>
                 <div class="hero-tags" aria-label="Research areas">
                     <span>GeoAI</span>
                     <span>Urban Computing</span>
-                    <span>Transportation Equity</span>
+                    <span>Transit Equity</span>
                     <span>Walkability</span>
-                    <span>Remote Sensing</span>
+                    <span>Eye-tracking</span>
                     <span>Lidar</span>
+                    <span>Remote Sensing</span>
                 </div>
                 <div class="hero-actions">
-                    <a class="btn primary" href="assets/cv.pdf" target="_blank" rel="noopener">View CV</a>
-                    <a class="btn secondary" href="#research">Explore Research</a>
+                    <a class="btn primary" href="assets/cv.pdf" target="_blank" rel="noopener">Download CV</a>
+                    <a class="btn secondary" href="#projects">View Projects</a>
                 </div>
             </div>
-            <div class="hero-card">
-                <img src="images/profile.png" alt="Portrait of Shashank Karki">
-                <div class="status-card">
-                    <strong>Current focus</strong>
-                    <span>GeoAI for walkability, transit access to health care, eye-tracking based green exposure, and generative AI in planning.</span>
+
+            <div class="hero-visual" aria-label="Visual research summary">
+                <div class="map-card">
+                    <div class="map-toolbar">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="map-canvas">
+                        <span class="route route-one"></span>
+                        <span class="route route-two"></span>
+                        <span class="node n1"></span>
+                        <span class="node n2"></span>
+                        <span class="node n3"></span>
+                        <span class="node n4"></span>
+                        <span class="pulse p1"></span>
+                        <span class="pulse p2"></span>
+                    </div>
+                    <div class="map-caption">
+                        <strong>Research lens</strong>
+                        <span>Streetscapes · access · exposure · movement</span>
+                    </div>
                 </div>
+                <img class="profile-photo" src="images/profile.png" alt="Portrait of Shashank Karki">
+                <div class="floating-card card-a"><strong>3,355</strong><span>street-view samples</span></div>
+                <div class="floating-card card-b"><strong>7</strong><span>Virginia transit regions</span></div>
+                <div class="floating-card card-c"><strong>92</strong><span>human validation raters</span></div>
             </div>
         </div>
     </section>
 
+    <section class="stats-strip" aria-label="Portfolio highlights">
+        <div class="container stat-grid">
+            <article><strong>GeoAI</strong><span>multimodal urban perception</span></article>
+            <article><strong>Transit</strong><span>public service accessibility</span></article>
+            <article><strong>Vision</strong><span>eye-tracking + segmentation</span></article>
+            <article><strong>GIS</strong><span>spatial models + web mapping</span></article>
+        </div>
+    </section>
+
     <section class="section about" id="about">
-        <div class="container two-column">
+        <div class="container about-panel">
             <div>
                 <p class="eyebrow">About me</p>
                 <h2>Research at the intersection of cities, mobility, environment, and AI.</h2>
             </div>
             <div class="body-text">
                 <p>
-                    My work uses spatial analysis, computer vision, large language models, transit accessibility modeling, and field-based sensing to understand how people experience urban environments. I am especially interested in practical geospatial methods that can inform planning, transportation equity, public health, and environmental decision-making.
+                    I am a Ph.D. student in Geospatial and Environmental Analysis at Virginia Tech. My work uses spatial analysis, computer vision, large language models, transit accessibility modeling, and field-based sensing to understand how people experience urban environments.
                 </p>
                 <p>
-                    I have worked across GIS, remote sensing, photogrammetry, lidar-based movement analysis, accessibility modeling, and spatial database management in academic, public-facing, and applied geospatial settings.
+                    I am especially interested in practical geospatial methods that can inform planning, transportation equity, public health, environmental exposure assessment, and healthier public spaces.
                 </p>
             </div>
         </div>
@@ -80,31 +111,29 @@
 
     <section class="section education-section">
         <div class="container">
-            <div class="section-heading">
+            <div class="section-heading centered">
                 <p class="eyebrow">Education</p>
                 <h2>Academic background</h2>
             </div>
             <div class="education-grid">
-                <article class="info-card">
+                <article class="info-card top-card">
                     <span class="card-date">2024–Present</span>
                     <h3>Ph.D. in Geospatial and Environmental Analysis</h3>
                     <p class="muted">Virginia Tech · Blacksburg, VA</p>
                     <p><strong>Thesis:</strong> Enhancing Urban Spaces with GeoAI and Visual Language Models</p>
                     <p><strong>Advisors:</strong> Dr. Robert Oliver and Dr. Junghwan Kim</p>
-                    <p><strong>Coursework:</strong> Machine Learning, Big Data Engineering, GenAI for Social Sciences</p>
                 </article>
                 <article class="info-card">
                     <span class="card-date">2022–2024</span>
                     <h3>Master's in Geography</h3>
-                    <p class="muted">Virginia Tech · Blacksburg, VA · GPA: 4.0</p>
+                    <p class="muted">Virginia Tech · GPA: 4.0</p>
                     <p><strong>Thesis:</strong> Tracking Human Movement and Occupancy Indoors Using Terrestrial Lidar</p>
-                    <p><strong>Advisor:</strong> Dr. Thomas Pingel</p>
                 </article>
                 <article class="info-card">
                     <span class="card-date">2014–2018</span>
                     <h3>B.E. in Geomatics Engineering</h3>
-                    <p class="muted">Kathmandu University · Dhulikhel, Nepal · GPA: 3.84</p>
-                    <p><strong>Thesis:</strong> Effect of image overlap, GCP number, and GCP distribution on UAV photogrammetry accuracy</p>
+                    <p class="muted">Kathmandu University · GPA: 3.84</p>
+                    <p><strong>Thesis:</strong> UAV photogrammetry accuracy using image overlap, GCP number, and GCP distribution</p>
                 </article>
             </div>
         </div>
@@ -118,93 +147,78 @@
                 <p class="section-intro">My research combines computational geospatial methods with human-centered urban and environmental questions.</p>
             </div>
             <div class="focus-grid">
-                <article class="focus-card">
-                    <h3>GeoAI & multimodal models</h3>
-                    <p>Evaluating how visual language models interpret streetscapes, spatial context, and built-environment conditions.</p>
-                </article>
-                <article class="focus-card">
-                    <h3>Transportation accessibility</h3>
-                    <p>Measuring inequities in public transit access to essential services using GTFS, R5R, spatial statistics, and demographic data.</p>
-                </article>
-                <article class="focus-card">
-                    <h3>Human-centered sensing</h3>
-                    <p>Combining eye-tracking, semantic segmentation, and field data to study active exposure to urban greenery.</p>
-                </article>
-                <article class="focus-card">
-                    <h3>Lidar & digital twins</h3>
-                    <p>Using terrestrial lidar to model indoor movement, occupancy patterns, object detection, and shared-space behavior.</p>
-                </article>
-                <article class="focus-card">
-                    <h3>Remote sensing & environmental GIS</h3>
-                    <p>Working with satellite imagery, Google Earth Engine, HPC workflows, and spatial overlay analysis for environmental questions.</p>
-                </article>
-                <article class="focus-card">
-                    <h3>UAV photogrammetry</h3>
-                    <p>Analyzing UAV imagery, GCP design, orthomosaics, DTM/DSM generation, and geospatial accuracy assessment.</p>
-                </article>
-                <article class="focus-card">
-                    <h3>Spatial databases & web GIS</h3>
-                    <p>Managing spatial data repositories, geoportals, PostGIS databases, and web mapping workflows.</p>
-                </article>
-                <article class="focus-card">
-                    <h3>AI in planning</h3>
-                    <p>Studying how planning institutions interpret, use, resist, and govern generative AI tools in public decision-making.</p>
-                </article>
+                <article class="focus-card"><span class="icon">◎</span><h3>GeoAI & multimodal models</h3><p>Evaluating how visual language models interpret streetscapes, spatial context, and built-environment conditions.</p></article>
+                <article class="focus-card"><span class="icon">⌁</span><h3>Transportation accessibility</h3><p>Measuring inequities in public transit access to essential services using GTFS, R5R, spatial statistics, and demographics.</p></article>
+                <article class="focus-card"><span class="icon">◐</span><h3>Human-centered sensing</h3><p>Combining eye-tracking, semantic segmentation, and field data to study active exposure to urban greenery.</p></article>
+                <article class="focus-card"><span class="icon">▧</span><h3>Lidar & digital twins</h3><p>Using terrestrial lidar to model indoor movement, occupancy patterns, object detection, and shared-space behavior.</p></article>
+                <article class="focus-card"><span class="icon">◍</span><h3>Remote sensing & environmental GIS</h3><p>Working with satellite imagery, Google Earth Engine, HPC workflows, and spatial overlay analysis.</p></article>
+                <article class="focus-card"><span class="icon">◇</span><h3>UAV photogrammetry</h3><p>Analyzing UAV imagery, GCP design, orthomosaics, DTM/DSM generation, and geospatial accuracy assessment.</p></article>
+                <article class="focus-card"><span class="icon">▦</span><h3>Spatial databases & web GIS</h3><p>Managing spatial data repositories, geoportals, PostGIS databases, and web mapping workflows.</p></article>
+                <article class="focus-card"><span class="icon">✦</span><h3>AI in planning</h3><p>Studying how planning institutions interpret, use, resist, and govern generative AI tools in decision-making.</p></article>
             </div>
         </div>
     </section>
 
-    <section class="section projects">
+    <section class="section process-section">
+        <div class="container process-panel">
+            <div class="section-heading centered">
+                <p class="eyebrow">Method pipeline</p>
+                <h2>From spatial data to planning insight</h2>
+            </div>
+            <div class="process-grid">
+                <article><span>01</span><h3>Collect</h3><p>Street-view images, GTFS, census data, eye-tracking, lidar, UAV, and satellite data.</p></article>
+                <article><span>02</span><h3>Model</h3><p>Spatial accessibility, computer vision, semantic segmentation, GeoAI, and statistical models.</p></article>
+                <article><span>03</span><h3>Validate</h3><p>Human ratings, scenario checks, accuracy assessment, and robustness testing.</p></article>
+                <article><span>04</span><h3>Translate</h3><p>Maps, dashboards, manuscripts, visual evidence, and planning-facing recommendations.</p></article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section projects" id="projects">
         <div class="container">
             <div class="section-heading centered">
                 <p class="eyebrow">Selected work</p>
                 <h2>Projects</h2>
             </div>
-
             <div class="project-grid">
                 <article class="project-card featured">
-                    <img src="images/p1.jpg" alt="Project preview image">
+                    <div class="project-visual streetscape-visual" aria-hidden="true"><span></span><span></span><span></span></div>
                     <div class="project-content">
                         <span class="project-type">GeoAI · Walkability</span>
                         <h3>AI-Driven Walkability Assessment</h3>
                         <p>Using street-view imagery, spatial context, human ratings, image augmentation, and multimodal LLMs to evaluate pedestrian environments and community-centered improvements.</p>
-                        <a href="#publications" class="text-link">Related publication</a>
                     </div>
                 </article>
-
                 <article class="project-card">
+                    <div class="project-visual transit-visual" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
                     <div class="project-content">
                         <span class="project-type">Transit Equity</span>
                         <h3>Transit Access to Health Care</h3>
                         <p>Assessing public transit access to oral health and eye care providers in Virginia using GTFS, R5R, travel-time modeling, and regional equity analysis.</p>
-                        <a href="#publications" class="text-link">See outputs</a>
                     </div>
                 </article>
-
                 <article class="project-card">
+                    <div class="project-visual eye-visual" aria-hidden="true"><span></span><span></span></div>
                     <div class="project-content">
                         <span class="project-type">Eye-tracking · Computer Vision</span>
                         <h3>Active Green Exposure</h3>
                         <p>Quantifying human engagement with urban greenery using wearable eye-tracking, semantic segmentation, and walking/driving exposure comparisons.</p>
-                        <a href="#publications" class="text-link">See manuscript</a>
                     </div>
                 </article>
-
                 <article class="project-card">
+                    <div class="project-visual lidar-visual" aria-hidden="true"><span></span><span></span><span></span></div>
                     <div class="project-content">
                         <span class="project-type">Lidar · Digital Twins</span>
                         <h3>Indoor Movement and Occupancy</h3>
                         <p>Aggregating terrestrial lidar sensor data to detect movement, occupancy, and interactions in shared indoor spaces.</p>
-                        <a href="#publications" class="text-link">See publications</a>
                     </div>
                 </article>
-
                 <article class="project-card">
+                    <div class="project-visual planning-visual" aria-hidden="true"><span></span><span></span><span></span></div>
                     <div class="project-content">
                         <span class="project-type">Planning · AI Governance</span>
                         <h3>Generative AI in Urban Planning</h3>
-                        <p>Reviewing and studying how generative AI is used in urban and spatial planning, including methods, data practices, and spatial reasoning.</p>
-                        <a href="#publications" class="text-link">See review work</a>
+                        <p>Studying how generative AI is used in urban and spatial planning, including methods, data practices, spatial reasoning, and governance.</p>
                     </div>
                 </article>
             </div>
@@ -212,60 +226,16 @@
     </section>
 
     <section class="section work" id="experience">
-        <div class="container">
-            <div class="section-heading">
+        <div class="container split-layout">
+            <div class="sticky-heading">
                 <p class="eyebrow">Experience</p>
                 <h2>Research, teaching, and applied geospatial work</h2>
             </div>
             <div class="timeline">
-                <article class="timeline-item">
-                    <div class="timeline-date">2024–Present</div>
-                    <div>
-                        <h3>Ph.D. Research · Virginia Tech</h3>
-                        <p class="muted">Geospatial and Environmental Analysis · Blacksburg, VA</p>
-                        <p>Researching GeoAI, visual language models, urban walkability, transportation accessibility, and environmental exposure.</p>
-                    </div>
-                </article>
-                <article class="timeline-item">
-                    <div class="timeline-date">Jan 2022–Dec 2024</div>
-                    <div>
-                        <h3>Graduate Teaching Assistant</h3>
-                        <p class="muted">Department of Geography · Virginia Tech</p>
-                        <p>Delivered instructional support for GIS, Modeling with GIS, Programming for GIS, and Remote Sensing courses through labs, student support, and instructional assistance.</p>
-                    </div>
-                </article>
-                <article class="timeline-item">
-                    <div class="timeline-date">2022–2023</div>
-                    <div>
-                        <h3>Graduate Research Assistant</h3>
-                        <p class="muted">Virginia Tech</p>
-                        <p>Worked on accessibility and transportation network modeling, lidar sensor data analysis and object detection, green exposure index calculation, and satellite-based environmental analysis.</p>
-                    </div>
-                </article>
-                <article class="timeline-item">
-                    <div class="timeline-date">Mar 2019–Oct 2021</div>
-                    <div>
-                        <h3>Graduate Teaching Assistant</h3>
-                        <p class="muted">Department of Geomatics Engineering · Kathmandu University</p>
-                        <p>Taught GIS, Theory of Errors and Adjustments, and Control Survey; led survey camps; and managed survey and photogrammetry lab equipment.</p>
-                    </div>
-                </article>
-                <article class="timeline-item">
-                    <div class="timeline-date">2019–2021</div>
-                    <div>
-                        <h3>Spatial Database Manager / UAV and DGPS Surveyor</h3>
-                        <p class="muted">GeoNode Nepal · Nepal Electricity Authority</p>
-                        <p>Managed a spatial data repository for Nepal and conducted UAV/DGPS surveys, orthomosaic generation, DTM/DSM processing, and ground control point collection.</p>
-                    </div>
-                </article>
-                <article class="timeline-item">
-                    <div class="timeline-date">Jun–Aug 2018</div>
-                    <div>
-                        <h3>GIS Analyst</h3>
-                        <p class="muted">Energy Development Council, Nepal</p>
-                        <p>Estimated hydropower potential using hydrological modeling, ArcHydro tools, and environmental datasets.</p>
-                    </div>
-                </article>
+                <article class="timeline-item"><div class="timeline-date">2024–Present</div><div><h3>Ph.D. Research · Virginia Tech</h3><p class="muted">Geospatial and Environmental Analysis</p><p>Researching GeoAI, visual language models, urban walkability, transportation accessibility, and environmental exposure.</p></div></article>
+                <article class="timeline-item"><div class="timeline-date">Jan 2022–Dec 2024</div><div><h3>Graduate Teaching Assistant</h3><p class="muted">Department of Geography · Virginia Tech</p><p>Delivered instructional support for GIS, Modeling with GIS, Programming for GIS, and Remote Sensing courses.</p></div></article>
+                <article class="timeline-item"><div class="timeline-date">2022–2023</div><div><h3>Graduate Research Assistant</h3><p class="muted">Virginia Tech</p><p>Supported lidar-based human movement and occupancy research in shared indoor spaces.</p></div></article>
+                <article class="timeline-item"><div class="timeline-date">2019–2021</div><div><h3>GIS / Geospatial Specialist</h3><p class="muted">Applied geospatial and public-facing projects</p><p>Worked on GIS databases, web GIS, geoportals, spatial data management, and environmental mapping workflows.</p></div></article>
             </div>
         </div>
     </section>
@@ -273,156 +243,61 @@
     <section class="section publications" id="publications">
         <div class="container">
             <div class="section-heading centered">
-                <p class="eyebrow">Publications</p>
-                <h2>Selected publications and manuscripts</h2>
-                <p class="section-intro">A fuller publication list is available in my CV.</p>
+                <p class="eyebrow">Publications & outputs</p>
+                <h2>Selected research outputs</h2>
             </div>
-            <div class="publication-list">
-                <article>
-                    <span class="pub-status">In preparation</span>
-                    <p>Wang, C., Karki, S., & Zhang, M. (2026). Shifts in dental service areas following Medicaid policy change: A statewide analysis of Virginia Medicaid claims.</p>
-                </article>
-                <article>
-                    <span class="pub-status">In preparation</span>
-                    <p>Kim, J., Karki, S., Gyanwali, S., Chandramouli, V., David-John, B., & Bloom, M. (2026). From presence to perception: Quantifying human engagement with urban greenery using an AI-powered wearable eye-tracking device.</p>
-                </article>
-                <article>
-                    <span class="pub-status">In preparation</span>
-                    <p>Karki, S., Kim, J., Hankey, S., Ye, X., & Oliver, R. (2026). Generative AI for urban and spatial planning: A systematic review of methods, data practices, and spatial reasoning.</p>
-                </article>
-                <article>
-                    <span class="pub-status">In review</span>
-                    <p>Karki, S., Kim, J., Oliver, R., & Jang, K. M. (2025). An AI-driven framework for enhancing urban walkability using image analysis, augmentation, and community-centric improvements.</p>
-                </article>
-                <article>
-                    <span class="pub-status">2026</span>
-                    <p>Sherman, Z., Karki, S., Brickhouse, T., Vujicic, M., Nasseh, K., Wang, C., Kim, H., Kim, J., & Zhang, M. Geospatial access to oral health care in Virginia: Insights from driving and public transit analysis. <em>The Journal of the American Dental Association</em>, 157(1), 36–46.e6.</p>
-                </article>
-                <article>
-                    <span class="pub-status">2025</span>
-                    <p>Casado, G. L., Karki, S., John, V., Kim, J., & Zhang, M. Transit-Based Model to Evaluate Geospatial Accessibility of Eye Care in Virginia. <em>Investigative Ophthalmology & Visual Science</em>, 66(8), 2100.</p>
-                </article>
-                <article>
-                    <span class="pub-status">2025</span>
-                    <p>Flack, A. H., Pingel, T. J., Baird, T. D., Karki, S., & Abaid, N. Lidar-Based Detection and Analysis of Serendipitous Collisions in Shared Indoor Spaces. <em>Remote Sensing</em>, 17(18), 3236.</p>
-                </article>
-                <article>
-                    <span class="pub-status">2025</span>
-                    <p>Kim, J., Karki, S., Brickhouse, T., Vujicic, M., Nasseh, K., Wang, C., & Zhang, M. Navigating Disparities in Dental Health—A Transit-Based Investigation of Access to Dental Care in Virginia. <em>Community Dentistry and Oral Epidemiology</em>, 53(1), 117–124.</p>
-                </article>
-                <article>
-                    <span class="pub-status">2024</span>
-                    <p>Karki, S., Pingel, T. J., Baird, T. D., Flack, A., & Ogle, T. Enhancing Digital Twins with Human Movement Data: A Comparative Study of Lidar-Based Tracking Methods. <em>Remote Sensing</em>, 16(18), 3453.</p>
-                </article>
-                <article>
-                    <span class="pub-status">2024</span>
-                    <p>Gyanwali, S., Karki, S., Jang, K. M., Crawford, T., Zhang, M., & Kim, J. Implications for spatial non-stationarity and the neighborhood effect averaging problem in green inequality research. <em>Journal of Geographical Systems</em>.</p>
-                </article>
-                <article>
-                    <span class="pub-status">2021–2019</span>
-                    <p>Earlier work includes publications on agricultural drought, landslide susceptibility, UAV photogrammetry accuracy, UAV regulations in Nepal, and spatial data management.</p>
-                </article>
+            <div class="publication-grid">
+                <article><span class="pub-status">Under review</span><p>Karki, S., Kim, J., Oliver, R., & Jang, K. M. An AI-driven framework for enhancing urban walkability using image analysis, augmentation, and community-centric improvements.</p></article>
+                <article><span class="pub-status">In preparation</span><p>Karki, S., Kim, J., & Oliver, R. Active green exposure using eye-tracking and computer vision: A walking and driving comparison.</p></article>
+                <article><span class="pub-status">2026</span><p>Sherman, Z., Karki, S., Brickhouse, T., Vujicic, M., Nasseh, K., Wang, C., Kim, H., Kim, J., & Zhang, M. Geospatial access to oral health care in Virginia. <em>The Journal of the American Dental Association</em>.</p></article>
+                <article><span class="pub-status">2025</span><p>Casado, G. L., Karki, S., John, V., Kim, J., & Zhang, M. Transit-Based Model to Evaluate Geospatial Accessibility of Eye Care in Virginia. <em>Investigative Ophthalmology & Visual Science</em>.</p></article>
+                <article><span class="pub-status">2025</span><p>Flack, A. H., Pingel, T. J., Baird, T. D., Karki, S., & Abaid, N. Lidar-Based Detection and Analysis of Serendipitous Collisions in Shared Indoor Spaces. <em>Remote Sensing</em>.</p></article>
+                <article><span class="pub-status">2024</span><p>Karki, S., Pingel, T. J., Baird, T. D., Flack, A., & Ogle, T. Enhancing Digital Twins with Human Movement Data: A Comparative Study of Lidar-Based Tracking Methods. <em>Remote Sensing</em>.</p></article>
+                <article><span class="pub-status">Earlier work</span><p>Additional publications include work on green inequality, agricultural drought, landslide susceptibility, UAV photogrammetry accuracy, UAV regulations, and spatial data management.</p></article>
             </div>
         </div>
     </section>
 
     <section class="section conferences" id="presentations">
         <div class="container">
-            <div class="section-heading">
+            <div class="section-heading centered">
                 <p class="eyebrow">Presentations, posters, and talks</p>
                 <h2>Research communication</h2>
             </div>
             <div class="conference-grid">
-                <article>
-                    <h3>Harvard CGA Conference</h3>
-                    <p>GeoAI Twins for Walkable Cities: Modeling Urban Perception with Generative Image Analysis. Cambridge, MA, 2025.</p>
-                </article>
-                <article>
-                    <h3>AAG Annual Meeting</h3>
-                    <p>AI-driven framework for enhancing urban walkability using image analysis, augmentation, and community-centric improvements. Detroit, MI, 2025.</p>
-                </article>
-                <article>
-                    <h3>ARVO / IOVS</h3>
-                    <p>Transit-Based Model to Evaluate Geospatial Accessibility of Eye Care in Virginia. 2025.</p>
-                </article>
-                <article>
-                    <h3>Carilion Research Day</h3>
-                    <p>Eyes on Transit: Disparities in Accessing Eye Care by Public Transportation in Virginia. Roanoke, VA, 2025.</p>
-                </article>
-                <article>
-                    <h3>ASPRS International Technical Symposium</h3>
-                    <p>Aggregating Multi-Sensor Terrestrial Lidar Data for Analyzing Human Behavior. 2023.</p>
-                </article>
-                <article>
-                    <h3>SPARC Workshop</h3>
-                    <p>Invited talk: Capturing and Modelling Movement and Behavior in a Digital Twin. Arizona State University, 2023.</p>
-                </article>
+                <article><h3>Harvard CGA Conference</h3><p>GeoAI Twins for Walkable Cities: Modeling Urban Perception with Generative Image Analysis. Cambridge, MA, 2025.</p></article>
+                <article><h3>AAG Annual Meeting</h3><p>AI-driven framework for enhancing urban walkability using image analysis, augmentation, and community-centric improvements. Detroit, MI, 2025.</p></article>
+                <article><h3>ARVO / IOVS</h3><p>Transit-Based Model to Evaluate Geospatial Accessibility of Eye Care in Virginia. 2025.</p></article>
+                <article><h3>Carilion Research Day</h3><p>Eyes on Transit: Disparities in Accessing Eye Care by Public Transportation in Virginia. Roanoke, VA, 2025.</p></article>
+                <article><h3>ASPRS International Technical Symposium</h3><p>Aggregating Multi-Sensor Terrestrial Lidar Data for Analyzing Human Behavior. 2023.</p></article>
+                <article><h3>SPARC Workshop</h3><p>Invited talk: Capturing and Modelling Movement and Behavior in a Digital Twin. Arizona State University, 2023.</p></article>
             </div>
         </div>
     </section>
 
     <section class="section skills-section" id="skills">
-        <div class="container two-column">
-            <div>
+        <div class="container split-layout">
+            <div class="sticky-heading">
                 <p class="eyebrow">Skills & tools</p>
                 <h2>Technical toolkit</h2>
             </div>
-            <div class="skills-grid">
-                <article class="skill-card">
-                    <h3>GIS & spatial analysis</h3>
-                    <p>ArcGIS Pro, ArcMap, ArcGIS Online, ArcGIS Enterprise, QGIS, GeoDa, ERDAS IMAGINE, Google Earth Engine</p>
-                </article>
-                <article class="skill-card">
-                    <h3>Programming & data science</h3>
-                    <p>Python, R, JavaScript, NumPy, Pandas, GeoPandas, SciPy, Jupyter Notebook, JupyterLab, Google Colab</p>
-                </article>
-                <article class="skill-card">
-                    <h3>Databases & big data</h3>
-                    <p>SQLite, PostGIS, MySQL, PostgreSQL, Apache Spark</p>
-                </article>
-                <article class="skill-card">
-                    <h3>Photogrammetry & web GIS</h3>
-                    <p>Pix4D, WebODM, Agisoft Metashape, Mapbox, OpenLayers, GeoServer, Leaflet</p>
-                </article>
-                <article class="skill-card">
-                    <h3>Systems & collaboration</h3>
-                    <p>Linux/Ubuntu, Git/GitHub, AWS, Microsoft Office Suite</p>
-                </article>
-                <article class="skill-card">
-                    <h3>Languages</h3>
-                    <p>English, Nepali, Hindi</p>
-                </article>
+            <div class="skills-cloud">
+                <span>ArcGIS Pro</span><span>QGIS</span><span>Google Earth Engine</span><span>GeoDa</span><span>Python</span><span>R</span><span>JavaScript</span><span>GeoPandas</span><span>Pandas</span><span>SciPy</span><span>PostGIS</span><span>PostgreSQL</span><span>SQLite</span><span>Apache Spark</span><span>Pix4D</span><span>WebODM</span><span>Metashape</span><span>Mapbox</span><span>Leaflet</span><span>OpenLayers</span><span>GeoServer</span><span>Git/GitHub</span><span>Linux</span><span>AWS</span>
             </div>
         </div>
     </section>
 
     <section class="section honors-section">
         <div class="container">
-            <div class="section-heading">
+            <div class="section-heading centered">
                 <p class="eyebrow">Leadership & recognition</p>
                 <h2>Honors and service</h2>
             </div>
             <div class="honors-grid">
-                <article class="info-card">
-                    <span class="card-date">2023</span>
-                    <h3>Phi Kappa Phi</h3>
-                    <p>Inducted into the Honor Society of Phi Kappa Phi at Virginia Tech for outstanding academic excellence.</p>
-                </article>
-                <article class="info-card">
-                    <span class="card-date">2019</span>
-                    <h3>Best Paper Award</h3>
-                    <p>International Conference on Unmanned Aerial System in Geomatics, IIT Roorkee.</p>
-                </article>
-                <article class="info-card">
-                    <span class="card-date">2019</span>
-                    <h3>Academic Excellence Scholarship</h3>
-                    <p>Kathmandu University scholarship awarded across multiple semesters for highest academic performance.</p>
-                </article>
-                <article class="info-card">
-                    <span class="card-date">2021</span>
-                    <h3>FOSS4G Asia 2021</h3>
-                    <p>Local organizing committee member; helped coordinate schedule, venue management, sponsorships, and volunteers.</p>
-                </article>
+                <article class="info-card"><span class="card-date">2023</span><h3>Phi Kappa Phi</h3><p>Inducted into the Honor Society of Phi Kappa Phi at Virginia Tech for academic excellence.</p></article>
+                <article class="info-card"><span class="card-date">2019</span><h3>Best Paper Award</h3><p>International Conference on Unmanned Aerial System in Geomatics, IIT Roorkee.</p></article>
+                <article class="info-card"><span class="card-date">2019</span><h3>Academic Excellence Scholarship</h3><p>Kathmandu University scholarship awarded across multiple semesters for highest academic performance.</p></article>
+                <article class="info-card"><span class="card-date">2021</span><h3>FOSS4G Asia 2021</h3><p>Local organizing committee member; helped coordinate schedule, venue management, sponsorships, and volunteers.</p></article>
             </div>
         </div>
     </section>
@@ -447,7 +322,5 @@
         <span>Built with GitHub Pages</span>
     </div>
 </footer>
-
-<script src="js/slider.js"></script>
 </body>
 </html>
