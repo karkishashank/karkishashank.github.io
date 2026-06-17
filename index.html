@@ -1,3 +1,169 @@
-<title>This is my website</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shashank Karki | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<>Hello</>
+    <!--  Favicon-->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+    <div class="container nav-container">
+        <div class="logo">
+            <h1>Shashank Karki</h1>
+            <p>Ph.D. Candidate in Environmental Science</p>
+        </div>
+
+        <nav>
+            <!-- You can link these to other pages later -->
+            <a href="#">Home</a>
+            <a href="#">Publications</a>
+            <a href="#">CV</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero">
+    <div class="container hero-content">
+
+        <!-- ===== Profile Image ===== -->
+        <!-- Replace profile.jpg with your own image -->
+        <div class="hero-image">
+            <img src="images/profile.png" alt="Profile Photo">
+        </div>
+
+        <div class="hero-text">
+            <h2>Welcome!</h2>
+            <p>
+                I am a Ph.D. candidate in <strong>Environmental Science</strong> at University of XYZ.
+                My research focuses on climate change and ecosystem resilience.
+            </p>
+
+            <div class="email-container">
+            <div class="buttons">
+                <a href="assets/cv.pdf" class="btn primary" download>Download CV</a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shubhashishkarki@gmail.com" 
+   target="_blank" class="btn secondary">Email Me</a>
+            </div>
+            
+            <!-- <div class="email-fallback">
+                <code id="emailText">shubhashishkarki@gmail.com</code>
+                <button onclick="copyEmail()" class="copy-icon-btn" title="Copy to clipboard">📋</button>
+            </div>
+        </div> -->
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= HIGHLIGHTED PROJECTS (SLIDER) ================= -->
+<section class="projects">
+    <div class="container">
+        <h2 class="section-title">Highlighted Projects</h2>
+
+        <div class="slider">
+
+            <!-- Left Arrow -->
+            <button class="prev">&#10094;</button>
+
+            <div class="slides">
+
+                <!-- ===== PROJECT 1 ===== -->
+                <div class="slide active">
+                    <!-- Replace image -->
+                    <img src="images/p1.jpg" alt="Project 1">
+                    <div class="slide-content">
+                        <h3>Restoration of Coastal Habitats</h3>
+                        <p>Implementing restoration strategies to rebuild coastal ecosystems.</p>
+                        <a href="#" class="btn primary small">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- ===== PROJECT 2 ===== -->
+                <div class="slide">
+                    <img src="images/p1.jpg" alt="Project 2">
+                    <div class="slide-content">
+                        <h3>Urban Green Infrastructure Study</h3>
+                        <p>Assessing sustainability strategies in urban environments.</p>
+                        <a href="#" class="btn primary small">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- ===== PROJECT 3 ===== -->
+                <div class="slide">
+                    <img src="images/p1.jpg" alt="Project 3">
+                    <div class="slide-content">
+                        <h3>Sustainable Water Management</h3>
+                        <p>Developing innovative water conservation solutions.</p>
+                        <a href="#" class="btn primary small">Learn More</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Arrow -->
+            <button class="next">&#10095;</button>
+
+        </div>
+    </div>
+</section>
+
+    <!-- ================= WORK EXPERIENCE ================= -->
+    <section class="work">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+
+    <div class="work-item">
+        <div class="work-header">
+            <h3 class="job-title">Graduate Teaching Assistant</h3>
+            <span class="work-date">Jan 2022 – Dec 2024</span>
+        </div>
+        <span class="company-name">Virginia Polytechnic Institute and State University | Blacksburg, VA</span>
+        <div class="work-description">
+            <ul>
+                <li>Delivered instructional support for core GIS curriculum, including Principles of GIS, Modeling with GIS, Programming for GIS, and Remote Sensing.</li>
+                <li>Provided dedicated laboratory assistance and pedagogical support for the lead instructor.</li>
+                <li>Cultivated advanced competencies in technical instruction, verbal communication, and academic leadership.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="work-item">
+        <div class="work-header">
+            <h3 class="job-title">Software Engineer Intern</h3>
+            <span class="work-date">June 2022 – Aug 2022</span>
+        </div>
+        <span class="company-name">Tech Solutions Inc.</span>
+        <div class="work-description">
+            <ul>
+                <li>Optimized backend API performance by 20%.</li>
+                <li>Developed automated testing scripts for the main product suite.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+    <div class="container contact-container">
+
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>Email: your@email.com <button onclick="copyEmail()" class="copy-icon-btn" title="Copy to clipboard">📋</button></p> 
+            <p>LinkedIn: linkedin.com/in/yourname</p>
+            <p>Google Scholar: scholar.google.com/yourprofile</p>
+        </div>
+
+
+<!-- JS -->
+<script src="js/slider.js"></script>
+</body>
+</html>

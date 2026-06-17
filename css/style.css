@@ -1,0 +1,279 @@
+/* ===== GENERAL STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    color: #333;
+    padding-top: 100px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: white;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+
+    position: fixed;   /* Makes navbar fixed */
+    top: 0;            /* Stick to top */
+    left: 0;
+    width: 100%;       /* Full width */
+    z-index: 1000;  
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+nav a:hover {
+    color: #1d4ed8;
+}
+
+/* ===== HERO ===== */
+.hero {
+    padding: 60px 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Change image size here */
+.hero-image img {
+    width: 250px;
+    border-radius: 8px;
+}
+
+.hero-text h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+
+.primary {
+    background: #1d4ed8;
+    color: white;
+}
+
+.secondary {
+    border: 1px solid #1d4ed8;
+    color: #1d4ed8;
+}
+
+.small {
+    padding: 8px 14px;
+    font-size: 14px;
+}
+
+/* ===== SECTION TITLE ===== */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+/* ===== SLIDER ===== */
+.slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width:auto;
+    justify-content: center;
+}
+
+.slide {
+    min-width: 50%;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Overlay box on project image */
+.slide-content {
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    max-width: 300px;
+}
+
+/* Arrow buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #1d4ed8;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* ===== WORK EXPERIENCE ===== */
+.work {
+    padding: 80px 20px; /* Increased vertical padding for better section breathing */
+    max-width: 900px;   /* Constrains width for readability */
+    margin: 0 auto;
+}
+
+.work-item {
+    position: relative;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+    border-left: 2px solid #e8eaed; /* Creates a subtle timeline line */
+    padding-left: 30px; /* Gap between the line and the text */
+}
+
+/* Optional: Small dot on the timeline */
+.work-item::before {
+    content: "";
+    position: absolute;
+    left: -7px; /* Centers dot on the 2px border */
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: #4285f4; /* Google Blue */
+    border-radius: 50%;
+}
+
+.work-item:last-child {
+    border-left: 2px solid transparent; /* Removes line for the last item */
+}
+
+.work-header {
+    display: flex;
+    justify-content: space-between; /* Job title left, Dates right */
+    align-items: baseline;
+    flex-wrap: wrap; /* Good for mobile */
+    margin-bottom: 8px;
+}
+
+.job-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #202124;
+    margin: 0;
+}
+
+.company-name {
+    font-weight: 500;
+    color: #5f6368;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.work-date {
+    font-size: 0.9rem;
+    color: #70757a;
+    font-weight: 400;
+}
+
+.work-description ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #3c4043;
+    line-height: 1.6;
+}
+/* ===== CONTACT ===== */
+.contact {
+    background: #1e3a8a;
+    color: rgb(246, 241, 241);
+    padding: 10px 0;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.contact form textarea {
+    height: 100px;
+}
+
+/* Optional email copy */
+
+.email-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.email-fallback {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: #5f6368; /* Google Gray */
+}
+
+.email-fallback code {
+    background: #f1f3f4;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #dadce0;
+    color: #202124;
+}
+
+.copy-icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.copy-icon-btn:hover {
+    transform: scale(1.2);
+}
