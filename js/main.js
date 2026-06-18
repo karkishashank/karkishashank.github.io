@@ -59,13 +59,17 @@ document.querySelectorAll('.copy-cite').forEach(button => {
   });
 });
 
-// Auto-rotating project image sliders
+
+// Auto-rotating project image sliders: one visible image, 5-second loop
 const projectSliders = document.querySelectorAll('[data-slider]');
-projectSliders.forEach((slider, sliderIndex) => {
+projectSliders.forEach((slider) => {
   const slides = Array.from(slider.querySelectorAll('.project-slide'));
   const dots = Array.from(slider.querySelectorAll('.slider-dots span'));
   if (slides.length <= 1) return;
-  let current = 0;
+
+  let current = Math.max(0, slides.findIndex((slide) => slide.classList.contains('active')));
+  if (current === -1) current = 0;
+
   const showSlide = (index) => {
     slides[current].classList.remove('active');
     if (dots[current]) dots[current].classList.remove('active');
@@ -73,10 +77,60 @@ projectSliders.forEach((slider, sliderIndex) => {
     slides[current].classList.add('active');
     if (dots[current]) dots[current].classList.add('active');
   };
+
   dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => showSlide(index));
+    dot.addEventListener('click', (event) => {
+      event.stopPropagation();
+      showSlide(index);
+    });
   });
+
   setInterval(() => {
     showSlide((current + 1) % slides.length);
-  }, 3500 + (sliderIndex * 250));
+  }, 5000);
+});
+
+// Image lightbox: click project/research images to enlarge; Esc closes
+const lightbox = document.querySelector('[data-lightbox]');
+const lightboxImg = lightbox ? lightbox.querySelector('[data-lightbox-img]') : null;
+const lightboxCaption = lightbox ? lightbox.querySelector('[data-lightbox-caption]') : null;
+const lightboxClose = lightbox ? lightbox.querySelector('[data-lightbox-close]') : null;
+
+const openLightbox = (src, alt) => {
+  if (!lightbox || !lightboxImg) return;
+  lightboxImg.src = src;
+  lightboxImg.alt = alt || 'Expanded project image';
+  if (lightboxCaption) lightboxCaption.textContent = alt || '';
+  lightbox.classList.add('open');
+  lightbox.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+};
+
+const closeLightbox = () => {
+  if (!lightbox || !lightboxImg) return;
+  lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  lightboxImg.src = '';
+  document.body.style.overflow = '';
+};
+
+document.querySelectorAll('.project-slider').forEach((slider) => {
+  slider.addEventListener('click', () => {
+    const active = slider.querySelector('.project-slide.active') || slider.querySelector('.project-slide');
+    if (active) openLightbox(active.currentSrc || active.src, active.alt);
+  });
+});
+
+document.querySelectorAll('.research-image, .gallery-image, .project-image').forEach((img) => {
+  img.addEventListener('click', () => openLightbox(img.currentSrc || img.src, img.alt));
+});
+
+if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+if (lightbox) {
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) closeLightbox();
+  });
+}
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeLightbox();
 });
