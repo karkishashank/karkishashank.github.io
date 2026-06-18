@@ -78,5 +78,47 @@ projectSliders.forEach((slider, sliderIndex) => {
   });
   setInterval(() => {
     showSlide((current + 1) % slides.length);
-  }, 3500 + (sliderIndex * 250));
+  }, 5000);
 });
+
+
+// Click-to-zoom for research/project/gallery images. Esc or backdrop click closes.
+(() => {
+  const zoomableSelector = '.research-image, .project-slide, .gallery-image, .project-image';
+  const lightbox = document.createElement('div');
+  lightbox.className = 'image-lightbox';
+  lightbox.setAttribute('role', 'dialog');
+  lightbox.setAttribute('aria-modal', 'true');
+  lightbox.innerHTML = '<button type="button" aria-label="Close enlarged image">&times;</button><img alt="">';
+  document.body.appendChild(lightbox);
+
+  const lightboxImg = lightbox.querySelector('img');
+  const closeButton = lightbox.querySelector('button');
+
+  const closeLightbox = () => {
+    lightbox.classList.remove('open');
+    lightboxImg.removeAttribute('src');
+    lightboxImg.alt = '';
+  };
+
+  document.querySelectorAll(zoomableSelector).forEach((img) => {
+    img.addEventListener('click', (event) => {
+      // Only open the currently visible slide in sliders.
+      if (img.classList.contains('project-slide') && !img.classList.contains('active')) return;
+      event.preventDefault();
+      lightboxImg.src = img.currentSrc || img.src;
+      lightboxImg.alt = img.alt || 'Project image';
+      lightbox.classList.add('open');
+    });
+  });
+
+  closeButton.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && lightbox.classList.contains('open')) {
+      closeLightbox();
+    }
+  });
+})();
