@@ -58,3 +58,25 @@ document.querySelectorAll('.copy-cite').forEach(button => {
     }
   });
 });
+
+// Auto-rotating project image sliders
+const projectSliders = document.querySelectorAll('[data-slider]');
+projectSliders.forEach((slider, sliderIndex) => {
+  const slides = Array.from(slider.querySelectorAll('.project-slide'));
+  const dots = Array.from(slider.querySelectorAll('.slider-dots span'));
+  if (slides.length <= 1) return;
+  let current = 0;
+  const showSlide = (index) => {
+    slides[current].classList.remove('active');
+    if (dots[current]) dots[current].classList.remove('active');
+    current = index;
+    slides[current].classList.add('active');
+    if (dots[current]) dots[current].classList.add('active');
+  };
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => showSlide(index));
+  });
+  setInterval(() => {
+    showSlide((current + 1) % slides.length);
+  }, 3500 + (sliderIndex * 250));
+});
